@@ -1,0 +1,36 @@
+body {
+	background-color: #a4e8f1;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	place-items: center;
+	gap: 10em;
+}
+
+.section {
+	width: 50%;
+	height: 70vh;
+	background-color: var(--color, blue);
+}
+
+.active {
+	animation: slideInLeft;
+	animation-duration: 0.7s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-in;
+}
+
+@keyframes slideInLeft {
+	from {
+		position: relative;
+		left: -60%;
+		opacity: 0;
+	}
+	to {
+		left: 60%;
+		opacity: 1;
+	}
+}
